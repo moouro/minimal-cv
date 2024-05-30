@@ -1,0 +1,29 @@
+---
+import Banner from '../components/Banner.astro'
+import Layout from '../layouts/Layout.astro'
+import Hero from '../components/Hero.astro'
+import About from '../components/About.astro'
+import Experience from '../components/Experience.astro'
+---
+
+<Layout title="Welcome to Astro.">
+	<div class="grid h-svh grid-rows-[auto_1fr_auto]">
+		<header class="bg-zinc-900 pb-20">
+			<div class="uk-container mt-5 max-w-3xl space-y-6">
+				<Banner />
+				<Hero />
+			</div>
+		</header>
+		<main>
+			<div class="uk-container mt-5 max-w-3xl">
+				<div class="space-y-6">
+					<About />
+					<Experience />
+				</div>
+			</div>
+		</main>
+		<footer>
+			<p>© 2021 Christopher Anderson</p>
+		</footer>
+	</div>
+</Layout>

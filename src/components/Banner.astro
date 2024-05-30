@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets'
+import profile from '../assets/profile.webp'
+---
+
+<div class="flex flex-wrap items-center justify-between gap-4">
+	<Image
+		src={profile}
+		alt="Profile"
+		width={50}
+		height={50}
+		loading={'eager'}
+		class={'rounded-full'}
+	/>
+
+	<p class="relative">
+		<!-- Adicionando um pseudo-elemento para criar o efeito de pulsação -->
+		<span class="relative mr-2 inline-block h-3 w-3 rounded-full bg-green-500 text-green-600">
+			<!-- Animação de escala para criar o efeito de pulsação -->
+			<span
+				class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"
+			></span>
+			<!-- Adicione a classe para o ícone, como fornecido -->
+		</span>
+		Available for Work
+	</p>
+</div>
