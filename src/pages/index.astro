@@ -5,6 +5,8 @@ import Hero from '../components/Hero.astro'
 import About from '../components/About.astro'
 import Experience from '../components/Experience.astro'
 import Education from '../components/Education.astro'
+import Skills from '../components/Skills.astro'
+import Projects from '../components/Projects.astro'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -18,9 +20,24 @@ import Education from '../components/Education.astro'
 		<main>
 			<div class="uk-container mt-5 max-w-3xl">
 				<div class="space-y-6">
-					<About />
-					<Experience />
-					<Education />
+					<section>
+						<About />
+					</section>
+					<section>
+						<Experience />
+					</section>
+					<section>
+						<Education />
+					</section>
+					<section>
+						<Skills />
+					</section>
+					<section>
+						<h2 class="uk-h2 text-zinc-100">Projects</h2>
+						<div class="mt-10 grid gap-4 md:grid-cols-3">
+							<Projects />
+						</div>
+					</section>
 				</div>
 			</div>
 		</main>

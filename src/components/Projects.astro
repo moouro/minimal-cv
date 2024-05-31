@@ -1,0 +1,34 @@
+---
+import { Image } from 'astro:assets'
+import thumb from '../assets/app.jpeg'
+import thumb2 from '../assets/app2.jpeg'
+import thumb3 from '../assets/app3.png'
+---
+
+<div class="grid w-48 grid-rows-1 rounded-md border border-zinc-700">
+	<div><Image src={thumb2} alt={' Dasboard'} format="avif" class="w-48" /></div>
+	<h3 class="uk-card-title p-4">Project 01</h3>
+	<p class="uk-margin p-4">
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur ratione accusamus quis
+	</p>
+</div>
+
+<div class="grid w-48 grid-rows-1 rounded-md border border-zinc-700">
+	<div><Image src={thumb} alt={' Dasboard'} format="avif" class="w-full" /></div>
+	<h3 class="uk-card-title p-4">Project 01</h3>
+	<p class="uk-margin p-4">
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur ratione accusamus quis
+		voluptatibus iste nulla mollitia doloribus laboriosam reiciendis reprehenderit enim, autem
+		minima esse quia temporibus libero, fugiat hic sit?
+	</p>
+</div>
+
+<div class="grid w-48 grid-rows-1 rounded-md border border-zinc-700">
+	<div><Image src={thumb3} alt={' Dasboard'} format="avif" class="w-full" /></div>
+	<h3 class="uk-card-title">Project 01</h3>
+	<p class="uk-margin">
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur ratione accusamus quis
+		voluptatibus iste nulla mollitia doloribus laboriosam reiciendis reprehenderit enim, autem
+		minima esse quia temporibus libero, fugiat hic sit?
+	</p>
+</div>
