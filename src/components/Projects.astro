@@ -3,32 +3,54 @@ import { Image } from 'astro:assets'
 import thumb from '../assets/app.jpeg'
 import thumb2 from '../assets/app2.jpeg'
 import thumb3 from '../assets/app3.png'
+
+const cards = [
+	{
+		title: 'Todo App',
+		description:
+			'Introducing , the ultimate app that streamlines your digital experience. Say goodbye to cluttered screens and endless searching.',
+		imagealt: 'Todo App',
+		image: thumb
+	},
+	{
+		title: 'Todo App 2',
+		description:
+			'Introducing , the ultimate app that streamlines your digital experience. Say goodbye to cluttered screens and endless searching.',
+		imagealt: 'Todo App 2',
+		image: thumb2
+	},
+
+	{
+		title: 'Todo App 3',
+		description:
+			'Introducing , the ultimate app that streamlines your digital experience. Say goodbye to ',
+		imagealt: 'Todo App 3',
+		image: thumb3
+	}
+]
 ---
 
-<div class="grid w-48 grid-rows-1 rounded-md border border-zinc-700">
-	<div><Image src={thumb2} alt={' Dasboard'} format="avif" class="w-48" /></div>
-	<h3 class="uk-card-title p-4">Project 01</h3>
-	<p class="uk-margin p-4">
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur ratione accusamus quis
-	</p>
-</div>
-
-<div class="grid w-48 grid-rows-1 rounded-md border border-zinc-700">
-	<div><Image src={thumb} alt={' Dasboard'} format="avif" class="w-full" /></div>
-	<h3 class="uk-card-title p-4">Project 01</h3>
-	<p class="uk-margin p-4">
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur ratione accusamus quis
-		voluptatibus iste nulla mollitia doloribus laboriosam reiciendis reprehenderit enim, autem
-		minima esse quia temporibus libero, fugiat hic sit?
-	</p>
-</div>
-
-<div class="grid w-48 grid-rows-1 rounded-md border border-zinc-700">
-	<div><Image src={thumb3} alt={' Dasboard'} format="avif" class="w-full" /></div>
-	<h3 class="uk-card-title">Project 01</h3>
-	<p class="uk-margin">
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur ratione accusamus quis
-		voluptatibus iste nulla mollitia doloribus laboriosam reiciendis reprehenderit enim, autem
-		minima esse quia temporibus libero, fugiat hic sit?
-	</p>
-</div>
+{
+	cards.map((card) => (
+		<a href="/">
+			<div class="group rounded-md border border-zinc-600">
+				<div class="space-y-4">
+					<div class="overflow-hidden rounded-md">
+						<Image
+							src={card.image}
+							alt={card.imagealt}
+							format="avif"
+							class="h-32 w-full  transform-gpu object-cover transition-transform duration-300 group-hover:scale-110"
+						/>
+					</div>
+					<div class="flex h-48 flex-col gap-3 p-2">
+						<h3 class="flex items-center justify-between gap-1 text-xl font-bold text-zinc-100">
+							{card.title} <span uk-icon="icon: link-external; ratio: 1" class="text-zinc-500" />
+						</h3>
+						<p>{card.description}</p>
+					</div>
+				</div>
+			</div>
+		</a>
+	))
+}
